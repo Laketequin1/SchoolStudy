@@ -1,6 +1,6 @@
 {
     "Alkene": {
-        "Definition": "",
+        "Definition": "An organic compound with at least one carbon-carbon double bond.",
         "Flow": {
             "Alkane": {
                 "Required Words": [
@@ -16,8 +16,8 @@
                 "Required Words": [
                     "Heat",
                     "Pressure",
-                    "Catalyst",
-                    "And"
+                    "And",
+                    "Catalyst"
                 ],
                 "Message": "Heat, pressure, and a catalyst are required."
             },
@@ -49,7 +49,7 @@
         }
     },
     "Alkane": {
-        "Definition": "",
+        "Definition": "A saturated hydrocarbon with single carbon-carbon bonds.",
         "Flow": {
             "Haloalkane": {
                 "Required Words": [
@@ -62,13 +62,14 @@
         }
     },
     "Haloalkane": {
-        "Definition": "",
+        "Definition": "An alkane with one or more hydrogen atoms replaced by halogen atoms.",
         "Flow": {
             "Amine": {
                 "Required Words": [
-                    "2NH3(alc) HERE CHECK THIS SOMETHING WRONG ALERT!!!!"
+                    "Reagent",
+                    "NH3(alc)"
                 ],
-                "Message": "Amine"
+                "Message": "The reagent NH3(alc) is required."
             },
             "Alcohol": {
                 "Required Words": [
@@ -87,7 +88,7 @@
         }
     },
     "Alcohol": {
-        "Definition": "",
+        "Definition": "An organic compound containing a hydroxyl (-OH) functional group.",
         "Flow": {
             "Alkene": {
                 "Required Words": [
@@ -118,19 +119,19 @@
         }
     },
     "Carboxylic Acid": {
-        "Definition": "",
+        "Definition": "An organic compound containing a carboxyl (-COOH) functional group.",
         "Flow": {}
     },
     "Polymer": {
-        "Definition": "",
+        "Definition": "A large molecule composed of repeating structural units called monomers.",
         "Flow": {}
     },
     "Diol": {
-        "Definition": "",
+        "Definition": "An organic compound containing two hydroxyl (-OH) functional groups.",
         "Flow": {}
     },
     "Amine": {
-        "Definition": "",
+        "Definition": "An organic compound derived from ammonia (NH3) by replacing one or more hydrogen atoms with alkyl or aryl groups.",
         "Flow": {}
     }
 }
