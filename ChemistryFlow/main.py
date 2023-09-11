@@ -6,6 +6,11 @@ settings = {
     "DynamicTipLength": True
 }
 
+if os.name == "posix":
+    clear_command = "clear"
+else:
+    clear_command = "cls"
+
 current_directory = os.getcwd()
 subdir_path = "ChemistryFlow"
 if subdir_path not in current_directory:
@@ -44,13 +49,13 @@ random.shuffle(possible_flow_paths)
 for flow_path in possible_flow_paths:
     won = False
     while not won:
-        os.system("cls")
+        os.system(clear_command)
         print(f"Reaction between {flow_path['Start']} and {flow_path['End']}.")
         if settings["ShowExample"]:
             print(HandleFlow.get_message(flow_path))
         input("\nPress enter to continue...")
 
-        os.system("cls")
+        os.system(clear_command)
         time.sleep(0.5)
         if settings["ShowTips"]:
             answer = HandleFlow.get_message(flow_path)

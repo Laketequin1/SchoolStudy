@@ -101,7 +101,7 @@
                     "HX",
                     "PCl3",
                     "PCl5",
-                    "SOCl",
+                    "SOCl2",
                     "Reagent"
                 ],
                 "Message": "A reagent HX (hydrogen halides), PCl3, PCl5, or SOCl2 is required."
