@@ -8,7 +8,8 @@ settings = {
 
 current_directory = os.getcwd()
 subdir_path = "ChemistryFlow"
-os.chdir(subdir_path)
+if subdir_path not in current_directory:
+    os.chdir(subdir_path)
 
 file_path = "flows.json"
 
