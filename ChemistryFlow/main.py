@@ -128,8 +128,8 @@ for i, flow_path in enumerate(possible_flow_paths):
 
             similarity_ratio = fuzz.ratio(user_answer, HandleFlow.get_definition(flow_path).lower()) / 100
 
-            similarity_ratio_bar = 0.93
-            if similarity_ratio < 0.9 and not "pass" in user_answer:
+            similarity_ratio_bar = 0.95
+            if similarity_ratio < similarity_ratio_bar and not "pass" in user_answer:
                 mistakes += 1
                 print(f"\nIncorrect. Accuracy is not close enough: {similarity_ratio}/{similarity_ratio_bar}")
                 print(HandleFlow.get_definition(flow_path))
