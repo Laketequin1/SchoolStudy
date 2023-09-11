@@ -1,7 +1,7 @@
 import json, random, os, time, re
 
 settings = {
-    "ShowExample": True,
+    "ShowExample": False,
     "ShowTips": True,
     "DynamicTipLength": True
 }
@@ -52,14 +52,15 @@ test_length = len(possible_flow_paths)
 for i, flow_path in enumerate(possible_flow_paths):
     won = False
     while not won:
-        os.system(clear_command)
-        print(f"Reaction between {flow_path['Start']} and {flow_path['End']}. ({i + 1}/{test_length})")
         if settings["ShowExample"]:
+            os.system(clear_command)
+            print(f"Reaction between {flow_path['Start']} and {flow_path['End']}. ({i + 1}/{test_length})")
             print(HandleFlow.get_message(flow_path))
-        input("\nPress enter to continue...")
+            input("\nPress enter to continue...")
 
         os.system(clear_command)
         time.sleep(0.5)
+        print(f"Write what is needed for the reaction between {flow_path['Start']} and {flow_path['End']}. ({i + 1}/{test_length})")
         if settings["ShowTips"]:
             answer = HandleFlow.get_message(flow_path)
             for word in HandleFlow.get_required_words(flow_path):
@@ -69,7 +70,6 @@ for i, flow_path in enumerate(possible_flow_paths):
                     replacement_word = "_" * 5
                 answer = HandleFlow.replace_words_ignore_case(answer, word, replacement_word)
             print(answer)
-        print(f"Write what is needed for the reaction between {flow_path['Start']} and {flow_path['End']}:")
         user_answer = input("").lower()
 
         missing_words = []
@@ -77,7 +77,7 @@ for i, flow_path in enumerate(possible_flow_paths):
             if word.lower() not in user_answer:
                 missing_words.append(word)
             
-        if missing_words:
+        if missing_words and not "pass" in user_answer:
             mistakes += 1
             print("\nIncorrect. You forgot to include the following words:")
             for missing_word in missing_words:
