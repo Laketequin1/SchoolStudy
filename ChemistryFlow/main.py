@@ -1,9 +1,9 @@
 import json, random, os, time, re
 
 settings = {
-    "ShowExample": False,
-    "ShowTips": True,
-    "DynamicTipLength": True
+    "ShowExample": False,      # Shows the answer before input (Very Easy)
+    "ShowTips": True,          # Shows what words are missing (Medium)
+    "DynamicTipLength": False  # Makes ShowTips easier by having changing gap length
 }
 
 if os.name == "posix":
@@ -23,6 +23,7 @@ with open(file_path, 'r') as file:
 
 possible_flow_paths = []
 mistakes = 0
+start_time = time.time()
 
 class HandleFlow:
     @staticmethod
@@ -92,5 +93,8 @@ for i, flow_path in enumerate(possible_flow_paths):
 
 os.system(clear_command)
 
+end_time = time.time() - start_time
+minutes, seconds = divmod(end_time, 60)
+
 print("Completed!")
-print(f"You had a total of {mistakes} mistakes.")
+print(f"You had a total of {mistakes} mistakes in a time of {minutes} minutes and {seconds} seconds.")
