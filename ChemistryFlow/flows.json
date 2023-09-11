@@ -19,7 +19,7 @@
                     "Catalyst",
                     "And"
                 ],
-                "Message": "Heat, pressure, and a catalyst is required."
+                "Message": "Heat, pressure, and a catalyst are required."
             },
             "Diol": {
                 "Required Words": [
@@ -28,7 +28,7 @@
                     "And",
                     "Reagents"
                 ],
-                "Message": "The reagents H+ and MnO4- is required."
+                "Message": "The reagents H+ and MnO4- are required."
             },
             "Alcohol": {
                 "Required Words": [
@@ -57,7 +57,7 @@
                     "Heat",
                     "And"
                 ],
-                "Message": "Both UV and heat is required."
+                "Message": "Both UV and heat are required."
             }
         }
     },
