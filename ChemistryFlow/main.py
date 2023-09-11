@@ -22,6 +22,7 @@ with open(file_path, 'r') as file:
     flows = json.load(file)
 
 possible_flow_paths = []
+mistakes = 0
 
 class HandleFlow:
     @staticmethod
@@ -46,11 +47,13 @@ for starting_compound_name, starting_compound_values in flows.items():
 
 random.shuffle(possible_flow_paths)
 
-for flow_path in possible_flow_paths:
+test_length = len(possible_flow_paths)
+
+for i, flow_path in enumerate(possible_flow_paths):
     won = False
     while not won:
         os.system(clear_command)
-        print(f"Reaction between {flow_path['Start']} and {flow_path['End']}.")
+        print(f"Reaction between {flow_path['Start']} and {flow_path['End']}. ({i + 1}/{test_length})")
         if settings["ShowExample"]:
             print(HandleFlow.get_message(flow_path))
         input("\nPress enter to continue...")
@@ -75,6 +78,7 @@ for flow_path in possible_flow_paths:
                 missing_words.append(word)
             
         if missing_words:
+            mistakes += 1
             print("\nIncorrect. You forgot to include the following words:")
             for missing_word in missing_words:
                 print(missing_word)
@@ -86,4 +90,7 @@ for flow_path in possible_flow_paths:
             input("\nPress enter to continue...")
             won = True
 
+os.system(clear_command)
 
+print("Completed!")
+print(f"You had a total of {mistakes} mistakes.")
