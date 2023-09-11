@@ -1,0 +1,136 @@
+{
+    "Alkene": {
+        "Definition": "",
+        "Flow": {
+            "Alkane": {
+                "Required Words": [
+                    "H2",
+                    "Pt",
+                    "Hi",
+                    "Reagent",
+                    "Catalyst"
+                ],
+                "Message": "The reagent H2 with Pt or Hi as a catalyst is required."
+            },
+            "Polymer": {
+                "Required Words": [
+                    "Heat",
+                    "Pressure",
+                    "Catalyst",
+                    "And"
+                ],
+                "Message": "Heat, pressure, and a catalyst is required."
+            },
+            "Diol": {
+                "Required Words": [
+                    "H+",
+                    "MnO4-",
+                    "And",
+                    "Reagents"
+                ],
+                "Message": "The reagents H+ and MnO4- is required."
+            },
+            "Alcohol": {
+                "Required Words": [
+                    "H+",
+                    "H2O",
+                    "Reagents"
+                ],
+                "Message": "The reagents H+ and H2O are required."
+            },
+            "Haloalkane": {
+                "Required Words": [
+                    "X2",
+                    "HX",
+                    "Halogen"
+                ],
+                "Message": "A halogen is required, X2 or HX."
+            }
+        }
+    },
+    "Alkane": {
+        "Definition": "",
+        "Flow": {
+            "Haloalkane": {
+                "Required Words": [
+                    "UV",
+                    "Heat",
+                    "And"
+                ],
+                "Message": "Both UV and heat is required."
+            }
+        }
+    },
+    "Haloalkane": {
+        "Definition": "",
+        "Flow": {
+            "Amine": {
+                "Required Words": [
+                    "2NH3(alc) HERE CHECK THIS SOMETHING WRONG ALERT!!!!"
+                ],
+                "Message": "Amine"
+            },
+            "Alcohol": {
+                "Required Words": [
+                    "KOH(aq)",
+                    "Reagent"
+                ],
+                "Message": "The reagent KOH(aq) is required."
+            },
+            "Alkene": {
+                "Required Words": [
+                    "KOH(alc)",
+                    "Reagent"
+                ],
+                "Message": "The reagent KOH(alc) is required."
+            }
+        }
+    },
+    "Alcohol": {
+        "Definition": "",
+        "Flow": {
+            "Alkene": {
+                "Required Words": [
+                    "H2SO4",
+                    "Reagent"
+                ],
+                "Message": "The reagent H2SO4 is required."
+            },
+            "Haloalkane": {
+                "Required Words": [
+                    "HX",
+                    "PCl3",
+                    "PCl5",
+                    "SOCl",
+                    "Reagent"
+                ],
+                "Message": "A reagent HX (hydrogen halides), PCl3, PCl5, or SOCl2 is required."
+            },
+            "Carboxylic Acid": {
+                "Required Words": [
+                    "H+",
+                    "Cr2O72-",
+                    "MnO4-",
+                    "Reagent"
+                ],
+                "Message": "A reagent Cr2O72- or MnO4- in an acidic solution H+ is required."
+            }
+        }
+    },
+    "Carboxylic Acid": {
+        "Definition": "",
+        "Flow": {}
+    },
+    "Polymer": {
+        "Definition": "",
+        "Flow": {}
+    },
+    "Diol": {
+        "Definition": "",
+        "Flow": {}
+    },
+    "Amine": {
+        "Definition": "",
+        "Flow": {}
+    }
+}
